@@ -81,7 +81,7 @@ print("Time: " + str(round(test3time, 2))+"sec")
 print("Test 4: Evaluating XGBClassifier")
 from xgboost import XGBClassifier
 xgboost_model = XGBClassifier(tree_method='hist',n_jobs=4)
-#xgboost_model.fit(X_train, y_train)
+xgboost_model.fit(X_train, y_train)
 # Testing the dataset on trained model for Random Forest
 y_pred = xgboost_model.predict(X_test)
 score = xgboost_model.score(X_test,y_test)*100
